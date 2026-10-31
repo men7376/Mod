@@ -12,10 +12,10 @@ jobs:
       - uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: current
-      - run: unzip customcrosshair.zip
+      - run: unzip CustomCrosshair-Fabric-26_2.zip
       - run: gradle build
-        working-directory: customcrosshair
+        working-directory: CustomCrosshair
       - uses: actions/upload-artifact@v4
         with:
           name: mod
-          path: customcrosshair/build/libs/*.jar
+          path: CustomCrosshair/build/libs/*.jar
